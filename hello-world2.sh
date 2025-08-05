@@ -1,2 +1,3 @@
 #!/bin/bash
-echo "Hello-World"
+
+echo "all variables passed to the script: $@"
