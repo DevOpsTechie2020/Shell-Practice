@@ -1,10 +1,21 @@
 #!/bin/bash
 
-NUMBER=$1
+USERID=$(id -u)
 
-if [ $NUMBER -lt 10 ]
+if [ $USERID -eq 0 ]
 then
-    echo "given number $NUMBER is less than 10"
+    echo "You are running with root access"
 else
-    echo "given number $NUMBER  is not less than 10"
+    echo "Error: you are not running with root access"
+    exit 1
+fi
+
+dnf install mysql -y
+
+if [ $? -eq 0 ]
+then
+    echo "Installing MySQL is. . . Success"
+else
+    echo "Installing MySQL is. . . FAILURE"
+    exit 1
 fi
