@@ -10,9 +10,9 @@ fi
 VALIDATE(){
    if [ $1 -eq 0 ]
     then
-        echo "Installing MySQL is SUCCESS."
+        echo "Installing $2 is SUCCESS."
     else
-        echo "Installing MySQL is FAILURE."
+        echo "Installing $2 is FAILURE."
         exit 1
     fi  
 }
