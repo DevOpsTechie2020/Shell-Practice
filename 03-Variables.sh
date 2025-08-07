@@ -1,5 +1,5 @@
 #!/bin/bash
-PERSON1=Trump
+PERSON1=Trump #there should not be space between lable and key
 PERSON2=Musk
 echo "$PERSON1: Hey $PERSON2, How are you?"
 echo "$PERSON2: Hello $PERSON1, I am fine. How you doing?"
